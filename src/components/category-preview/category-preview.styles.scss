@@ -1,0 +1,23 @@
+.category-preview-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: 0.6px;
+  }
+
+  .preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+  }
+}
