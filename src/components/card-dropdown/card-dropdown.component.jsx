@@ -8,14 +8,15 @@ import {
 } from "./card-dropdown.style.jsx";
 import { useSelector } from "react-redux";
 import { selectCardItems } from "../../store/card/card.selector.js";
+import { useCallback } from "react";
 
 const CardDropdown = () => {
   const cardItems = useSelector(selectCardItems);
   const navigate = useNavigate();
 
-  const goToCheckoutHandler = () => {
+  const goToCheckoutHandler = useCallback(() => {
     navigate("/checkout");
-  };
+  }, []);
 
   return (
     <CardDropdownContainer>

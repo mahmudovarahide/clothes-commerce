@@ -1,6 +1,7 @@
+import { memo } from "react";
 import "./card-item.style.scss";
 
-const CardItem = ({ cardItem }) => {
+const CardItem = memo(({ cardItem }) => {
   const { name, imageUrl, price, quantity } = cardItem;
   return (
     <div className="card-item-container">
@@ -13,5 +14,5 @@ const CardItem = ({ cardItem }) => {
       </div>
     </div>
   );
-};
+});
 export default CardItem;
